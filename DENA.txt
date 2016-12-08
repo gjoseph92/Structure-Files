@@ -19,8 +19,8 @@ dataDir: (?P<year>\d{4}) (?P<unit>\w{4})(?P<site>.+) (?P<name>.*)
             nvspl: NVSPL_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt
         PNG
 
-            #          DENA         UPST       _    2015       _      05        _     02      _HD?.png
-            png: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
+            #                 DENA          UPST     _    2015       _      05        _     02      _HD?.png
+            spectrograms: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
         SPL
     02 ANALYSIS
         SPL Analysis
