@@ -1,0 +1,15 @@
+# Unit: OLYM
+# Name: Olympic National Park
+
+dataDir: (?P<unit>\w{4})(?P<site>.+)
+    AUDIO
+        audio: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})_(?P<hour>\d{2})(?P<min>\d{2})(?P<sec>\d{2})\..*
+    data: DATA
+        siteVisitPDF: Site Visit Data Sheet (?P<unit>\w{4})(?P<site>.+)\.pdf
+        siteVisitXLS: SiteVisitDataSheet_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})\.xlsx
+        metrics: X``RawData`(?P<unit>\w{4})`NPS`(<P?<season>\w+)`METRICS_(?P<unit>\w{4})(?P<site>.+)\.txt
+    NVSPL
+        nvspl: NVSPL_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt
+    PNG
+        spectrograms: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
+    SPL

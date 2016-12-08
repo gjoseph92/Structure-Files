@@ -1,0 +1,16 @@
+# Unit: EVER
+# Name: Everglades National Park
+
+AUDIO
+    (?P<unit>\w{4})(?P<site>.+)
+        audio: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})_(?P<hour>\d{2})(?P<min>\d{2})(?P<sec>\d{2})\..*
+Generated
+    (?P<unit>\w{4})(?P<site>.+)
+        spectrograms: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
+Metadata
+    (?P<unit>\w{4})(?P<site>.+)
+        photos: (?P<filename>.+)\.(?P<ext>.+)
+        siteVisitPDF: svds\.pdf
+NVSPL
+    (?P<unit>\w{4})(?P<site>.+)
+        nvspl: NVSPL_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt

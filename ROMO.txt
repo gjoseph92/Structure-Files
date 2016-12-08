@@ -1,0 +1,15 @@
+# Unit: ROMO
+# Name: Rocky Mountain National Park
+
+AUDIO
+    (?P<unit>\w{4})(?P<site>.+)
+        audio: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})_(?P<hour>\d{2})(?P<min>\d{2})(?P<sec>\d{2})\..*
+        db_tone: 94dBZtone\.mp3
+NVSPL
+    (?P<unit>\w{4})(?P<site>.+)
+        nvspl: NVSPL_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt
+OTHER
+    metrics: METRICS_(?P<unit>\w{4})(?P<site>.+)\.txt
+    srcid: SRCID_(?P<unit>\w{4})(?P<site>.+)\.txt
+    summary: SUMMARY_(?P<unit>\w{4})(?P<site>.+)\.txt
+RAW
