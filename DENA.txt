@@ -3,39 +3,39 @@
 
 #                   2015 DENAUPST Upper Straightaway Glacier
 #                   +--+^+--++--+^+-------------------------+
-#                  ___/ |  \  \   \__________________     \
-#                 /     |   \  \___________          \     \
-#         _______/_____ | ___\_________  __\_________ | ____\_____
-dataDir: (?P<year>\d{4}) (?P<unit>\w{4})(?P<site>\w{4}) (?P<name>.*)
+#                  ___/ |  \   \  \________________     \
+#                 /     |   \   \__________        \     \
+#         _______/_____ | ___\_________  __\_______ | ____\_____
+dataDir: (?P<year>\d{4}) (?P<unit>\w{4})(?P<site>.+) (?P<name>.*)
     01 DATA
         AUDIO
 
             #               DENA        UPST     _      2015            05            11       _      12           45              00      .  MP3
-            audio: (?P<unit>\w{4})(?P<site>\w{4})_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})_(?P<hour>\d{2})(?P<min>\d{2})(?P<sec>\d{2})\..*
+            audio: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})(?P<month>\d{2})(?P<day>\d{2})_(?P<hour>\d{2})(?P<min>\d{2})(?P<sec>\d{2})\..*
         Metadata
         NVSPL
 
             #      NVSPL_      DENA         UPST       _    2015       _      05        _     02       _     00         .txt
-            nvspl: NVSPL_(?P<unit>\w{4})(?P<site>\w{4})_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt
+            nvspl: NVSPL_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<hour>\d{2})\.txt
         PNG
 
             #          DENA         UPST       _    2015       _      05        _     02      _HD?.png
-            png: (?P<unit>\w{4})(?P<site>\w{4})_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
+            png: (?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2}).*\.png
         SPL
     02 ANALYSIS
         SPL Analysis
 
             #      SRCID_    DENA           UPST        .txt
-            srcid: SRCID_(?P<unit>\w{4})(?P<site>\w{4})\.txt
+            srcid: SRCID_(?P<unit>\w{4})(?P<site>.+)\.txt
 
             #        METRICS_   DENA           UPST        .txt
-            metrics: METRICS_(?P<unit>\w{4})(?P<site>\w{4})\.txt
+            metrics: METRICS_(?P<unit>\w{4})(?P<site>.+)\.txt
 
             #        DAILYPA_    DENA           UPST        .txt
-            dailypa: DAILYPA_(?P<unit>\w{4})(?P<site>\w{4})\.txt
+            dailypa: DAILYPA_(?P<unit>\w{4})(?P<site>.+)\.txt
 
             #           LOUDEVENTS_    DENA           UPST        .txt
-            loudevents: LOUDEVENTS_(?P<unit>\w{4})(?P<site>\w{4})\.txt
+            loudevents: LOUDEVENTS_(?P<unit>\w{4})(?P<site>.+)\.txt
         wav: WAV Analysis
             microarray: Microarray
 
@@ -43,7 +43,7 @@ dataDir: (?P<year>\d{4}) (?P<unit>\w{4})(?P<site>\w{4}) (?P<name>.*)
                 microarrayFiles: (?P<filename>.+)\.(?P<ext>.+)
 
             #                  DENA           UPST       _DayAudibilityEntry_    2015       _    7             _    12          -    2016                  12                 _    01                .xls
-            dayAudibility: (?P<unit>\w{4})(?P<site>\w{4})_DayAudibilityEntry_(?P<year>\d{4})_(?P<month>\d{1,2})_(?P<day>\d{1,2})-(?P<listen_year>\d{4})(?P<listen_month>\d{2})_(?P<listen_day>\d{2})\.xls
+            dayAudibility: (?P<unit>\w{4})(?P<site>.+)_DayAudibilityEntry_(?P<year>\d{4})_(?P<month>\d{1,2})_(?P<day>\d{1,2})-(?P<listen_year>\d{4})(?P<listen_month>\d{2})_(?P<listen_day>\d{2})\.xls
 
             #           LA_    DENA           UPST       _    2015       _    07          _    12        _    gjoseph       .txt
-            audibility: LA_(?P<unit>\w{4})(?P<site>\w{4})_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<listener>\w+)\.txt
+            audibility: LA_(?P<unit>\w{4})(?P<site>.+)_(?P<year>\d{4})_(?P<month>\d{2})_(?P<day>\d{2})_(?P<listener>\w+)\.txt
